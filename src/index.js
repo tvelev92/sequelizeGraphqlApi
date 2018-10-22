@@ -61,14 +61,5 @@ const createUsersWithMessages = async () => {
       password: 'testingPassword',
       role: 'ADMIN',
     }
-    //   messages: [
-    //     {
-    //       text: 'Published the Road to learn React',
-    //     },
-    //   ],
-    // },
-    // {
-    //   include: [models.Message],
-    // },
   );
 };
