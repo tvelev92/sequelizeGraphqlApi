@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken';
 import { combineResolvers } from 'graphql-resolvers';
 import { isAuthenticated, isAuthedAndAdmin } from './authorization';
-
+import { AuthenticationError, UserInputError } from 'apollo-server';
 
 const createToken = async (user, secret, expiresIn) => {
   const { id, email, username } = user;
@@ -43,6 +43,7 @@ export default {
       { login, password },
       { models, secret }
     ) => {
+      console.debug(login, password);
       const user = await models.User.findByLogin(login);
 
       if (!user) {
