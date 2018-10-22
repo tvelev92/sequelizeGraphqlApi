@@ -11,8 +11,10 @@ export default gql`
     signUp(
       username: String! 
       email: String!
-      passwor: String!
+      password: String!
+      role: String!
     ): Token!
+    signIn(login: String!, password: String!): Token!
   }
 
   type Token {
@@ -22,6 +24,7 @@ export default gql`
   type User {
     id: ID!
     username: String!
-    messages: [Message!]
+    email: String!
+    role: String!
   }
 `;
