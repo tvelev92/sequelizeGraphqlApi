@@ -13,6 +13,9 @@ const models = {
   User: sequelize.import('./user'),
   Company: sequelize.import('./company'),
   Facility: sequelize.import('./facility'),
+  InspectionPoint: sequelize.import('./inspectionPoint'),
+  InspectionPointTemplate: sequelize.import('./inspectionPointTemplate'),
+  JobTemplate: sequelize.import('./jobTemplate')
 };
 
 Object.keys(models).forEach(key => {

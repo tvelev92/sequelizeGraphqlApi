@@ -60,7 +60,6 @@ const user = (sequelize, DataTypes) => {
         where: { email: login },
       });
     }
-
     return user;
   };
 

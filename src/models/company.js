@@ -1,5 +1,5 @@
 const company = (sequelize, DataTypes) => {
-    const Company = sequelize.define('company', {
+    const Company = sequelize.define('Company', {
         compantName: {
             type: DataTypes.STRING,
             unique: true,
@@ -8,11 +8,11 @@ const company = (sequelize, DataTypes) => {
                 notEmpty: true,
             },
         },
-    });
+    }, { freezeTableName: true });
 
 
     Company.associate = models => {
-        Company.hasMany(models.Facility, { onDelete: 'CASCADE' });
+        Company.hasMany(models.Facility);
     };
 
 
