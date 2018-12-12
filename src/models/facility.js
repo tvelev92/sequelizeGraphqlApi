@@ -1,9 +1,11 @@
+const uuidv4 = require('uuid/v4');
+
 const facility = (sequelize, DataTypes) => {
     const Facility = sequelize.define('Facility', {
-        id: {
+        uuid: {
             type: DataTypes.UUID,
-            defaultValue: DataTypes.UUIDv4,
-            primaryKey: true,
+            defaultValue: DataTypes.UUIDV1,
+            primaryKey: true
         },
         facilityAddress: {
             type: DataTypes.STRING,

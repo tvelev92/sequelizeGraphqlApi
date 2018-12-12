@@ -10,7 +10,7 @@ const inspectionPointTemplate = (sequelize, DataTypes) => {
             defaultValue: true,
         },
         deviceType: {
-            type: DataTypes.ENUM('type1', 'type2', 'type3', 'type4', 'type5', 'type6')
+            type: DataTypes.STRING,
         },
     }, { freezeTableName: true });
 

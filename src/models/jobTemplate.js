@@ -16,6 +16,9 @@ const jobTemplate = (sequelize, DataTypes) => {
         JobTemplate.belongsTo(models.Facility);
     };
     
+    JobTemplate.beforeCreate(() => {
+        console.log('FUCK');
+    })
 
     
 

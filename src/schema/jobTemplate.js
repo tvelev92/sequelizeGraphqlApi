@@ -6,14 +6,9 @@ input PointTemplate {
   deviceType: String!
 }
 
-input CreateJobTemplateInput {
-  id: String!
-  inspectionPointTemplateData: [PointTemplate!]
-}
-
-  extend type Mutation {
+ extend type Mutation {
     createJobTemplate(
-      inspectionPointTemplateData: CreateJobTemplateInput! 
+      inspectionPointTemplateData: [PointTemplate!]
     ): JobTemplate!
   }
 
@@ -21,5 +16,4 @@ input CreateJobTemplateInput {
     id: ID!
     inspectionPointTemplates: [InspectionPointTemplate!]
   }
-  
 `;

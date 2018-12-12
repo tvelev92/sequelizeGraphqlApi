@@ -1,4 +1,4 @@
 import userResolvers from '../resolvers/user';
+import facility from '../resolvers/facility';
 
-
-export default [userResolvers];
+export default [userResolvers, facility];
